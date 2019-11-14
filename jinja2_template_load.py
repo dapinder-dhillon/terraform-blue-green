@@ -19,7 +19,7 @@ def print_html_doc():
     # Notice the use of trim_blocks, which greatly helps control whitespace.
     j2_env = Environment(loader=FileSystemLoader(THIS_DIR),
                          trim_blocks=True)
-    j2_env.get_template('ec2.tf.j2').stream( version=TABLEAU_VERSION).dump("terraform/ec2.tf")
+    j2_env.get_template('ec2.tf.j2').stream( version=TABLEAU_VERSION).dump("terraform/ec2-generated.tf")
 
    # print j2_env.get_template('ec2.tf.j2').render(
     #    version='dapinder_100'
